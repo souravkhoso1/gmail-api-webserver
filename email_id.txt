@@ -9,6 +9,7 @@ care@emaila.1mg.com
 care@hoichoi.tv
 cineplex@ecampaigns.cineplex.com
 communication@email.decathlon.in
+contact@pratilipi.com
 contact@tripcrafters.com
 contacts@jeevansathi.com
 customer-success@mirantis.com
@@ -36,12 +37,15 @@ info@pbengage.payback.in
 info@protect.mcafee.com
 info@subscribe.boat-lifestyle.com
 info@thegrandyyc.ca
+info@twitter.com
+info@zoomcar.com
 jobs-listings@linkedin.com
 jobs@jobsalert.shine.com
 mail@mail.adobe.com
 mailers@marketing.goindigo.in
 mailrobot@mail.xing.com
 marketing@showpass.com
+matchalert@jeevansathi.com
 Membership@cyberlinkmember.com
 messages-noreply@linkedin.com
 mozilla@email.mozilla.org
@@ -66,6 +70,7 @@ no-reply@tumblr.com
 noreply-in@email.decathlon.in
 noreply-reviews@canadiantire.ca
 noreply@cleartrip.com
+noreply@freebitco.in
 noreply@topcoder.com
 noreply@uber.com
 offers@e.walmart.ca
@@ -74,8 +79,12 @@ quincy@freecodecamp.org
 safeway@em.safeway.ca
 safewayoffers@em.safeway.ca
 samsung@innovations.samsungusa.com
+services@custcomm.icicibank.com
+store-news@amazon.ca
+store-news@amazon.in
 support@paisabazaar.com
 support@sitepoint.com
+TheChildrensPlace@email.childrensplace.com
 triangle@email.triangle.com
 uber@uber.com
 updates@cinepolisindia.in
