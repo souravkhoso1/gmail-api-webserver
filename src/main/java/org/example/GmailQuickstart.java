@@ -13,6 +13,7 @@ import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.gmail.Gmail;
 import com.google.api.services.gmail.GmailScopes;
 import com.google.api.services.gmail.model.ListMessagesResponse;
+import java.io.File;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -21,6 +22,7 @@ import java.io.InputStreamReader;
 import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /* class to demonstrate use of Gmail list labels API */
 public class GmailQuickstart {
@@ -82,11 +84,15 @@ public class GmailQuickstart {
     public static void listAndDeleteMessages(Gmail service, String emailId) throws IOException {
         String user = "me";
         ListMessagesResponse messages = service.users().messages().list(user).setQ("from:"+emailId).execute();
-        for (int i=0; i<messages.getMessages().size(); i++){
-            String messageId = messages.getMessages().get(i).getId();
-            service.users().messages().delete(user, messageId).execute();
+        if (messages.getResultSizeEstimate() == 0){
+            System.out.println(emailId + ": No message exist");
+        } else {
+            for (int i=0; i<messages.getMessages().size(); i++){
+                String messageId = messages.getMessages().get(i).getId();
+                service.users().messages().delete(user, messageId).execute();
+            }
+            System.out.println(emailId + ": Deleted " + messages.getMessages().size() + " message(s)");
         }
-        System.out.println(emailId + ": Deleted " + messages.getMessages().size() + " message(s)");
     }
 
     public static void main(String... args) throws IOException, GeneralSecurityException {
@@ -96,7 +102,13 @@ public class GmailQuickstart {
                 .setApplicationName(APPLICATION_NAME)
                 .build();
 
-        listAndDeleteMessages(service, "noreply@content.goibibo.com");
+        Scanner myReader = new Scanner(new File("email_id.txt"));
+        while (myReader.hasNextLine()) {
+            String data = myReader.nextLine();
+            listAndDeleteMessages(service, data);
+        }
+
+        //listAndDeleteMessages(service, "oldnavy@email.oldnavy.ca");
 
     }
 }
