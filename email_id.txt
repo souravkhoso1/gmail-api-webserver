@@ -8,9 +8,11 @@
 Coursera@email.coursera.org
 IMnewsletters@em.intermiles.com
 Info@email.showpass.com
+JioNews@mailer.jio.com
 JioTV@mailer.jio.com
 Membership@cyberlinkmember.com
 Microsoft@engage.microsoft.com
+PetSmart@mail.petsmart.com
 Tagged@taggedmail.com
 TheChildrensPlace@email.childrensplace.com
 academy@interviewbit.com
@@ -28,12 +30,14 @@ care@emaila.1mg.com
 care@hoichoi.tv
 care@mail.hoichoi.tv
 chiku@travel.wanderu.com
+cineplex@campaigns.cineplex.com
 cineplex@ecampaigns.cineplex.com
 communication@email.decathlon.in
 contact@pratilipi.com
 contact@tripcrafters.com
 contacts@jeevansathi.com
 crm@em.oyorooms.com
+crm@em9104.gopaisa.com
 customer-reviews-messages@amazon.ca
 customer-success@mirantis.com
 dianne.pena@sitepoint.com
@@ -53,9 +57,11 @@ giftideas@cadburygifting.in
 go@flyflair.com
 happiness@moments.fnp.com
 hello@auraframes.com
+hello@etmoney.com
 hello@info.etmoney.com
 hello@interviewbit.com
 hello@mail.blinkist.com
+hello@mail.grammarly.com
 hello@mailer.interviewbit.com
 hello@scaler.com
 hello@students.udemy.com
@@ -88,6 +94,7 @@ insights@careerseeker.accenture.com
 invest@marketing.shriramfinance.in
 invitations@linkedin.com
 irctctourismoffers@irctc.co.in
+jobmessenger@monsterindia.com
 jobs-listings@linkedin.com
 jobs@jobsalert.shine.com
 linkedin@e.linkedin.com
@@ -99,6 +106,7 @@ marketing@showpass.com
 matchalert@jeevansathi.com
 messages-noreply@linkedin.com
 mozilla@email.mozilla.org
+mozilla@eml.mozilla.org
 news@metroopinion.com
 news@news.sceneplus.ca
 news@picsart.com
@@ -121,6 +129,7 @@ no-reply@email.zebpay.com
 no-reply@emailer.airvistara.com
 no-reply@entertainment.bookmyshow.com
 no-reply@hello.curiositystream.com
+no-reply@hellotech.com
 no-reply@m.mail.coursera.org
 no-reply@mail.instagram.com
 no-reply@mailer.kfc.co.in
@@ -132,8 +141,11 @@ no-reply@newsletter.bookmyshow.com
 no-reply@post.bookmyshow.com
 no-reply@primevideo.com
 no-reply@sampark.gov.in
+no-reply@swiggy.in
 no-reply@topcoder.com
 no-reply@tumblr.com
+no-reply@urban-planet.com
+no-reply@urban-planet.com
 noreply-in@email.decathlon.in
 noreply-reviews@canadiantire.ca
 noreply@cleartrip.com
@@ -144,6 +156,7 @@ noreply@email.pcoptimum.ca
 noreply@freebitco.in
 noreply@groww.in
 noreply@mailers.zomato.com
+noreply@medium.com
 noreply@notifications.freelancer.com
 noreply@notifications.freelancer.com
 noreply@paytmoffers.in
@@ -152,9 +165,11 @@ noreply@swiggy.in
 noreply@topcoder.com
 noreply@uber.com
 noreply@updates.zee5.com
+noreply@zen-makemytrip.com
 notices@dlvr.it
 notification@jio.com
 notifications-noreply@linkedin.com
+notify@twitter.com
 offers@e.walmart.ca
 oldnavy@email.oldnavy.ca
 personalbanking@info.cibc.com
@@ -180,6 +195,7 @@ store-news@amazon.ca
 store-news@amazon.in
 support@cleartax.in
 support@creative-tim.com
+support@glowyyc.ca
 support@paisabazaar.com
 support@sitepoint.com
 team@info.digitalocean.com
@@ -191,6 +207,7 @@ updates-noreply@linkedin.com
 updates@academia-mail.com
 updates@cinepolisindia.in
 updates@myntra.com
+vacancy@job.shine.com
 voila@email.voila.ca
 vp@info.vpc.ca
 webevent@elastic.co

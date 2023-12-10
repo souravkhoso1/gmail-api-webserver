@@ -64,7 +64,7 @@ public class GmailQuickstart {
         GoogleClientSecrets clientSecrets =
                 GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(in));
 
-        List<String> SCOPES = new ArrayList<String>();
+        List<String> SCOPES = new ArrayList<>();
         SCOPES.add(GmailScopes.MAIL_GOOGLE_COM);
         SCOPES.add(GmailScopes.GMAIL_MODIFY);
         SCOPES.add(GmailScopes.GMAIL_READONLY);
@@ -76,12 +76,12 @@ public class GmailQuickstart {
                 .setAccessType("offline")
                 .build();
         LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8888).build();
-        Credential credential = new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
         //returns an authorized Credential object.
-        return credential;
+        return new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
     }
 
-    public static void listAndDeleteMessages(Gmail service, String emailId) throws IOException {
+    public static int listAndDeleteMessages(Gmail service, String emailId) throws IOException {
+        int totalDeletedMessages = 0;
         String user = "me";
         ListMessagesResponse messages = service.users().messages().list(user).setQ("from:"+emailId).execute();
         if (messages.getResultSizeEstimate() == 0){
@@ -90,9 +90,11 @@ public class GmailQuickstart {
             for (int i=0; i<messages.getMessages().size(); i++){
                 String messageId = messages.getMessages().get(i).getId();
                 service.users().messages().delete(user, messageId).execute();
+                totalDeletedMessages++;
             }
             System.out.println(emailId + ": Deleted " + messages.getMessages().size() + " message(s)");
         }
+        return totalDeletedMessages;
     }
 
     public static void main(String... args) throws IOException, GeneralSecurityException {
@@ -103,10 +105,13 @@ public class GmailQuickstart {
                 .build();
 
         Scanner myReader = new Scanner(new File("email_id.txt"));
+        int deletedMessageCount = 0;
         while (myReader.hasNextLine()) {
             String data = myReader.nextLine();
-            listAndDeleteMessages(service, data);
+            deletedMessageCount += listAndDeleteMessages(service, data);
         }
+
+        System.out.println("Total deleted messages: " + deletedMessageCount);
 
         //listAndDeleteMessages(service, "oldnavy@email.oldnavy.ca");
 
