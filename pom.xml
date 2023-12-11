@@ -85,7 +85,7 @@
     <repository>
       <id>github</id>
       <name>GitHub Packages</name>
-      <url>https://maven.pkg.github.com/octocat/hello-world</url>
+      <url>https://maven.pkg.github.com/souravkhoso1/gmail-api-webserver</url>
     </repository>
   </distributionManagement>
 </project>
