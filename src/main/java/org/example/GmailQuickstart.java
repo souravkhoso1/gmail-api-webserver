@@ -87,12 +87,13 @@ public class GmailQuickstart {
         if (messages.getResultSizeEstimate() == 0){
             System.out.println(emailId + ": No message exist");
         } else {
-            for (int i=0; i<messages.getMessages().size(); i++){
+            int messageCount = messages.getMessages().size();
+            for (int i=0; i<messageCount; i++){
                 String messageId = messages.getMessages().get(i).getId();
                 service.users().messages().delete(user, messageId).execute();
                 totalDeletedMessages++;
             }
-            System.out.println(emailId + ": Deleted " + messages.getMessages().size() + " message(s)");
+            System.out.println(emailId + ": Deleted " + messageCount + (messageCount>1?" messages": " message"));
         }
         return totalDeletedMessages;
     }
