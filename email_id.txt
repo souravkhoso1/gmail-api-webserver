@@ -15,6 +15,7 @@ Microsoft@engage.microsoft.com
 PetSmart@mail.petsmart.com
 Tagged@taggedmail.com
 TheChildrensPlace@email.childrensplace.com
+YONOSBI@communications.sbi.co.in
 academy@interviewbit.com
 academy@mailer.interviewbit.com
 aditi@talent500.co
@@ -62,6 +63,7 @@ hello@info.etmoney.com
 hello@interviewbit.com
 hello@mail.blinkist.com
 hello@mail.grammarly.com
+hello@mail.lenskart.in
 hello@mailer.interviewbit.com
 hello@scaler.com
 hello@students.udemy.com
@@ -215,4 +217,3 @@ webex_comm@em.webex.com
 windowsinsiderprogram@e-mail.microsoft.com
 xboxreps@engage.xbox.com
 yonosbi@alerts.sbi.co.in
-hello@mail.lenskart.in
