@@ -41,6 +41,7 @@ crm@em.oyorooms.com
 crm@em9104.gopaisa.com
 customer-reviews-messages@amazon.ca
 customer-success@mirantis.com
+daniel@mail.modemobile.com
 dianne.pena@sitepoint.com
 disneyplus@mail.disneyplus.com
 do_not_reply@mailersp1.binance.com
@@ -100,6 +101,7 @@ jobmessenger@monsterindia.com
 jobs-listings@linkedin.com
 jobs@jobsalert.shine.com
 linkedin@e.linkedin.com
+mail@info.paytm.com
 mail@info.paytmmoney.com
 mail@mail.adobe.com
 mailers@marketing.goindigo.in
@@ -107,6 +109,7 @@ mailrobot@mail.xing.com
 marketing@showpass.com
 matchalert@jeevansathi.com
 messages-noreply@linkedin.com
+microsoft.start@email2.microsoft.com
 mozilla@email.mozilla.org
 mozilla@eml.mozilla.org
 news@metroopinion.com
@@ -117,6 +120,7 @@ newsletter@economictimesnews.com
 newsletter@email.norwegianreward.com
 newsletter@mktg.pepperfry.com
 newsletter@offers.dominos.co.in
+newsletter@rumble.com
 newsletters-noreply@linkedin.com
 newsletters@audible.in
 newsletters@hi.wellfound.com
@@ -191,6 +195,7 @@ service@en.lenskart.com
 service@info.remitly.com
 service@lenskart.in
 services@custcomm.icicibank.com
+shein@edm.ca.shein.com
 shop@email.stackcommerce.com
 spicejet@web-spicejet.com
 store-news@amazon.ca
@@ -210,6 +215,7 @@ updates@academia-mail.com
 updates@cinepolisindia.in
 updates@myntra.com
 vacancy@job.shine.com
+vacancy@opportunities.shine.com
 voila@email.voila.ca
 vp@info.vpc.ca
 webevent@elastic.co
