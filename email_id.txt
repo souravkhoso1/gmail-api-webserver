@@ -42,6 +42,7 @@ crm@em9104.gopaisa.com
 customer-reviews-messages@amazon.ca
 customer-success@mirantis.com
 daniel@mail.modemobile.com
+deals@market-us.sheinmail.com
 dianne.pena@sitepoint.com
 disneyplus@mail.disneyplus.com
 do_not_reply@mailersp1.binance.com
@@ -70,6 +71,7 @@ hello@scaler.com
 hello@students.udemy.com
 hello@updates.rapido.bike
 hello@updates.skipthedishes.com
+hellothere@solitairecash.com
 hi5@taggedmail.com
 ikea@news.email.ikea.ca
 important@mailer.jio.com
@@ -126,11 +128,9 @@ newsletters@audible.in
 newsletters@hi.wellfound.com
 newsletters@marketing.angel.co
 no-reply@blnts.com
-no-reply@blnts.com
 no-reply@customers.instacartemail.com
 no-reply@doordash.com
 no-reply@e.udemymail.com
-no-reply@email.zebpay.com
 no-reply@email.zebpay.com
 no-reply@emailer.airvistara.com
 no-reply@entertainment.bookmyshow.com
@@ -139,7 +139,6 @@ no-reply@hellotech.com
 no-reply@m.mail.coursera.org
 no-reply@mail.instagram.com
 no-reply@mailer.kfc.co.in
-no-reply@marketing.lyftmail.com
 no-reply@marketing.lyftmail.com
 no-reply@ncb.flipkart.com
 no-reply@ncp.flipkart.com
@@ -150,7 +149,6 @@ no-reply@sampark.gov.in
 no-reply@swiggy.in
 no-reply@topcoder.com
 no-reply@tumblr.com
-no-reply@urban-planet.com
 no-reply@urban-planet.com
 noreply-in@email.decathlon.in
 noreply-reviews@canadiantire.ca
@@ -164,7 +162,6 @@ noreply@groww.in
 noreply@mailers.zomato.com
 noreply@medium.com
 noreply@notifications.freelancer.com
-noreply@notifications.freelancer.com
 noreply@paytmoffers.in
 noreply@promo.airindiaexpress.com
 noreply@swiggy.in
@@ -176,6 +173,7 @@ notices@dlvr.it
 notification@jio.com
 notifications-noreply@linkedin.com
 notify@twitter.com
+nytdirect@nytimes.com
 offers@e.walmart.ca
 oldnavy@email.oldnavy.ca
 personalbanking@info.cibc.com
@@ -196,6 +194,7 @@ service@info.remitly.com
 service@lenskart.in
 services@custcomm.icicibank.com
 shein@edm.ca.shein.com
+shein@market.sheinmail.com
 shop@email.stackcommerce.com
 spicejet@web-spicejet.com
 store-news@amazon.ca
@@ -216,6 +215,7 @@ updates@cinepolisindia.in
 updates@myntra.com
 vacancy@job.shine.com
 vacancy@opportunities.shine.com
+vacancy@vacancies.shine.com
 voila@email.voila.ca
 vp@info.vpc.ca
 webevent@elastic.co
