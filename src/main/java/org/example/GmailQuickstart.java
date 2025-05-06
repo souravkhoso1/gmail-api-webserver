@@ -1,6 +1,6 @@
 package org.example;
 
-import com.google.api.client.auth.oauth2.Credential;
+import com.google.api.client.auth.oauth2 .Credential;
 import com.google.api.client.extensions.java6.auth.oauth2.AuthorizationCodeInstalledApp;
 import com.google.api.client.extensions.jetty.auth.oauth2.LocalServerReceiver;
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
@@ -24,36 +24,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-/* class to demonstrate use of Gmail list labels API */
 public class GmailQuickstart {
-    /**
-     * Application name.
-     */
     private static final String APPLICATION_NAME = "Gmail API Java Quickstart";
-    /**
-     * Global instance of the JSON factory.
-     */
     private static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
-    /**
-     * Directory to store authorization tokens for this application.
-     */
     private static final String TOKENS_DIRECTORY_PATH = "tokens";
-
-    /**
-     * Global instance of the scopes required by this quickstart.
-     * If modifying these scopes, delete your previously saved tokens/ folder.
-     */
-    //private static final List<String> SCOPES = new ArrayList<>(GmailScopes.GMAIL_LABELS, GmailScopes.GMAIL_MODIFY);
-    //Collections.singletonList(GmailScopes.GMAIL_LABELS);
     private static final String CREDENTIALS_FILE_PATH = "/client_id_client_secret_2023-05-27.json";
-
-    /**
-     * Creates an authorized Credential object.
-     *
-     * @param HTTP_TRANSPORT The network HTTP Transport.
-     * @return An authorized Credential object.
-     * @throws IOException If the credentials.json file cannot be found.
-     */
+    private static int totalDeleted = 0;
     private static Credential getCredentials(final NetHttpTransport HTTP_TRANSPORT)
             throws IOException {
         // Load client secrets.
@@ -64,7 +40,7 @@ public class GmailQuickstart {
         GoogleClientSecrets clientSecrets =
                 GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(in));
 
-        List<String> SCOPES = new ArrayList<>();
+        List<String> SCOPES = new ArrayList<String>();
         SCOPES.add(GmailScopes.MAIL_GOOGLE_COM);
         SCOPES.add(GmailScopes.GMAIL_MODIFY);
         SCOPES.add(GmailScopes.GMAIL_READONLY);
@@ -76,26 +52,31 @@ public class GmailQuickstart {
                 .setAccessType("offline")
                 .build();
         LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8888).build();
+        Credential credential = new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
         //returns an authorized Credential object.
-        return new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
+        return credential;
     }
 
-    public static int listAndDeleteMessages(Gmail service, String emailId) throws IOException {
-        int totalDeletedMessages = 0;
+    public static void listAndDeleteMessages(Gmail service, String emailId) throws IOException {
         String user = "me";
         ListMessagesResponse messages = service.users().messages().list(user).setQ("from:"+emailId).execute();
         if (messages.getResultSizeEstimate() == 0){
             System.out.println(emailId + ": No message exist");
         } else {
-            int messageCount = messages.getMessages().size();
-            for (int i=0; i<messageCount; i++){
-                String messageId = messages.getMessages().get(i).getId();
-                service.users().messages().delete(user, messageId).execute();
-                totalDeletedMessages++;
+            String nextPageToken = "";
+            int currentDeleted = 0;
+            while(nextPageToken != null){
+                nextPageToken = messages.getNextPageToken();
+                for (int i=0; i<messages.getMessages().size(); i++){
+                    String messageId = messages.getMessages().get(i).getId();
+                    service.users().messages().delete(user, messageId).execute();
+                    totalDeleted++;
+                    currentDeleted++;
+                }
+                messages = service.users().messages().list(user).setPageToken(nextPageToken).setQ("from:"+emailId).execute();
             }
-            System.out.println(emailId + ": Deleted " + messageCount + (messageCount>1?" messages": " message"));
+            System.out.println(emailId + ": Deleted " + currentDeleted + (currentDeleted > 1 ? " messages" : " message" ));
         }
-        return totalDeletedMessages;
     }
 
     public static void main(String... args) throws IOException, GeneralSecurityException {
@@ -106,15 +87,10 @@ public class GmailQuickstart {
                 .build();
 
         Scanner myReader = new Scanner(new File("email_id.txt"));
-        int deletedMessageCount = 0;
         while (myReader.hasNextLine()) {
             String data = myReader.nextLine();
-            deletedMessageCount += listAndDeleteMessages(service, data);
+            listAndDeleteMessages(service, data);
         }
-
-        System.out.println("Total deleted messages: " + deletedMessageCount);
-
-        //listAndDeleteMessages(service, "oldnavy@email.oldnavy.ca");
-
+        System.out.println("\nTotal deleted messaged count: " + totalDeleted);
     }
 }
