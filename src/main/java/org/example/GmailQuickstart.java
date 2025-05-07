@@ -13,12 +13,10 @@ import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.gmail.Gmail;
 import com.google.api.services.gmail.GmailScopes;
 import com.google.api.services.gmail.model.ListMessagesResponse;
-import java.io.File;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
+
+import java.nio.file.Files;
 import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,16 +25,17 @@ import java.util.Scanner;
 public class GmailQuickstart {
     private static final String APPLICATION_NAME = "Gmail API Java Quickstart";
     private static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
-    private static final String TOKENS_DIRECTORY_PATH = "tokens";
-    private static final String CREDENTIALS_FILE_PATH = "/client_id_client_secret_2023-05-27.json";
+    private static final String TOKENS_DIRECTORY_PATH = System.getenv("CLEANUP_TOKEN_DIR");
+    //private static final String CREDENTIALS_FILE_PATH = "/src/main/config/client_id_client_secret_2023-05-27.json";
     private static int totalDeleted = 0;
     private static Credential getCredentials(final NetHttpTransport HTTP_TRANSPORT)
             throws IOException {
         // Load client secrets.
-        InputStream in = GmailQuickstart.class.getResourceAsStream(CREDENTIALS_FILE_PATH);
-        if (in == null) {
-            throw new FileNotFoundException("Resource not found: " + CREDENTIALS_FILE_PATH);
-        }
+        String configPath = System.getenv("CLEANUP_CONFIG_DIR");
+        String configFilePath = configPath + "/" + "client_id_client_secret_2023-05-27.json";
+
+        File initialFile = new File(configFilePath);
+        InputStream in = Files.newInputStream(initialFile.toPath());
         GoogleClientSecrets clientSecrets =
                 GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(in));
 
